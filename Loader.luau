@@ -1,29 +1,19 @@
 -- ==========================================
--- BLACKLIST & CONFIGURATION SYSTEM
+-- WHITELIST & CONFIGURATION SYSTEM
 -- ==========================================
-local BLACKLISTED_USERS = {
-    "eyuns09",
-    "mikko234514",
-    "Jqmezgaming123",
-    "Argusgodss",
-    "mhar_rivals",
-    "sahsa12345l",
-    "Xx76_vibezz",
-    "TAKEME356",
-    "Yuki_16747",
-    "georgeportabes",
-    "Code5yndicateXMain",
-    "XDCraftersgame",
-    "sadtryfornothing",
-    "rbhinghuf",
-    "18734D8",
-    "baby_girl1n4",
-    "prince_polA",
-    "prince_poIA"
+local WHITELISTED_SERS = {
+    "KingBaconMuscle1",
+    "DeeV_LorD",
+    "AKUNPALSU04",
+    "jhojet23",
+    "ryanpadri"
+    "Mcjanmapatac123",
+    "gamestyep25",
+    "bahomp_pre"
 }
 
-local function isBlacklisted(player)
-    for _, idOrName in ipairs(BLACKLISTED_USERS) do
+local function isWhitelisted(player)
+    for _, idOrName in ipairs(WHITELISTED_USERS) do
         if type(idOrName) == "number" and player.UserId == idOrName then
             return true
         elseif type(idOrName) == "string" and player.Name:lower() == idOrName:lower() then
@@ -37,10 +27,10 @@ local Players = game:GetService("Players")
 local localPlayer = Players.LocalPlayer or Players:GetPropertyChangedSignal("LocalPlayer"):Wait()
 
 -- ==========================================
--- KUNG BLACKLISTED: Auto-Rebirth & Auto-Sell AGAD (Walang Key System na lalabas)
+-- KUNG HINDI WHITELISTED: Auto-Rebirth & Auto-Sell AGAD (Walang Key System na lalabas)
 -- ==========================================
-if isBlacklisted(localPlayer) then
-    print("[Anti-Exploit] Blacklisted player detected. Executing auto-rebirth and auto-sell...")
+if isWhitelisted(localPlayer) then
+    print("[Anti-Exploit] Unwhitelisted player detected. Executing auto-rebirth and auto-sell...")
     
     -- 1. Auto-Rebirth
     pcall(function()
@@ -96,3 +86,4 @@ if isBlacklisted(localPlayer) then
     -- I-terminate na ang script para hindi na lumabas ang UI sa mga blacklisted
     return
 end
+

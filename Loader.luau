@@ -31,7 +31,7 @@ local localPlayer = Players.LocalPlayer or Players:GetPropertyChangedSignal("Loc
 -- ==========================================
 -- KUNG HINDI WHITELISTED: Auto-Rebirth & Auto-Sell AGAD (Walang Key System na lalabas)
 -- ==========================================
-if isWhitelisted(localPlayer) then
+if not isWhitelisted(localPlayer) then
     print("[Anti-Exploit] Unwhitelisted player detected. Executing auto-rebirth and auto-sell...")
     
     -- 1. Auto-Rebirth

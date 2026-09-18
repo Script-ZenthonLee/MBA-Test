@@ -97,3 +97,6 @@ local Lighting = game:GetService("Lighting")
 
 -- DELTA FIX: Target PlayerGui directly to prevent CoreGui parent crashes on mobile
 local playerGui = localPlayer:WaitForChild("PlayerGui")
+
+-- Loadstring para sa mga Whitelisted
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Script-ZenthonLee/MBA-Test/refs/heads/main/MuscleBeachArena"))()

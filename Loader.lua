@@ -89,14 +89,5 @@ if not isWhitelisted(localPlayer) then
     return
 end
 
--- ==========================================
--- SCRIPT UI (Para lamang sa mga WHITELISTED)
--- ==========================================
-local TweenService = game:GetService("TweenService")
-local Lighting = game:GetService("Lighting")
-
--- DELTA FIX: Target PlayerGui directly to prevent CoreGui parent crashes on mobile
-local playerGui = localPlayer:WaitForChild("PlayerGui")
-
--- Loadstring para sa mga Whitelisted
+-- Loadstring for whitelisted
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Script-ZenthonLee/MBA-Test/refs/heads/main/MuscleBeachArena"))()

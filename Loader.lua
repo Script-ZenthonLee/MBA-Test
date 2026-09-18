@@ -1,7 +1,7 @@
 -- ==========================================
 -- WHITELIST & CONFIGURATION SYSTEM
 -- ==========================================
-local WHITELISTED_SERS = {
+local WHITELISTED_USERS = {
     "KingBaconMuscle1",
     "DeeV_LorD",
     "AKUNPALSU04",
@@ -9,7 +9,9 @@ local WHITELISTED_SERS = {
     "ryanpadri"
     "Mcjanmapatac123",
     "gamestyep25",
-    "bahomp_pre"
+    "bahomp_pre",
+    "huhseller09",
+    "santos0123078"
 }
 
 local function isWhitelisted(player)
@@ -86,4 +88,3 @@ if isWhitelisted(localPlayer) then
     -- I-terminate na ang script para hindi na lumabas ang UI sa mga blacklisted
     return
 end
-

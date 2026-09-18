@@ -88,3 +88,12 @@ if isWhitelisted(localPlayer) then
     -- I-terminate na ang script para hindi na lumabas ang UI sa mga blacklisted
     return
 end
+
+-- ==========================================
+-- SCRIPT UI (Para lamang sa mga WHITELISTED)
+-- ==========================================
+local TweenService = game:GetService("TweenService")
+local Lighting = game:GetService("Lighting")
+
+-- DELTA FIX: Target PlayerGui directly to prevent CoreGui parent crashes on mobile
+local playerGui = localPlayer:WaitForChild("PlayerGui")
